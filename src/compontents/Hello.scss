@@ -1,0 +1,11 @@
+
+/* @import "./Hello.css"; */
+
+$f:100px;
+$c:red;
+
+div{
+    color:$c;
+    font-size:$f;
+    background-image:url('../images/home.png');
+}

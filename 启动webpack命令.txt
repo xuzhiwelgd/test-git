@@ -1,0 +1,3 @@
+webpack命令行     webpack --config (文件名)
+也可以把webpack这个命令行配置到package.json里面用 简化命令行代码
+
