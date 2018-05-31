@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<form enctype="multipart/form-data" id="uploadForm">
+    <input type="text" name = "user">
+    <input type="text" name = "age">
+    <input type="text" name = "sex">
+  <input type="file" name="file" required  id="file"/>
+  <img src="" alt="">
+</form>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var myfile = document.getElementById('file');  
+    $("#file").change(function(){
+        $.ajax({
+          url: "http://wx.gaosoft.cn/strong/service/index.php?m=ApiUser&a=edit_register_info",
+          type: "POST",
+          data: new FormData($('#uploadForm')[0]),
+          processData: false, 
+          contentType: false,   
+          success:function(data){
+            console.log(data)
+          }
+        });
+    })
+
+</script>
+</html>
